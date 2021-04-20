@@ -14,7 +14,6 @@
 
 from datetime import datetime
 import os
-import re
 import urllib.request
 
 SHUTDOWN_EVENT = "Shutdown initiated"
@@ -38,9 +37,8 @@ def convert_to_datetime(line):
     returns:
     datetime(2014, 7, 3, 23, 27, 51)
     """
-    time_components = re.findall(r"\d+", line)
-    timestamp = [int(component) for component in time_components]
-    return datetime(*timestamp)
+    timestamp = line.split()[1]
+    return datetime.strptime(timestamp, "%Y-%m-%dT%H:%M:%S")
 
 
 def time_between_shutdowns(loglines):
