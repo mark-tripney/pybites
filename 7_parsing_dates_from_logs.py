@@ -51,7 +51,7 @@ def time_between_shutdowns(loglines):
     for line in loglines:
         if SHUTDOWN_EVENT in line:
             shutdown_events.append(convert_to_datetime(line))
-    return shutdown_events[1] - shutdown_events[0]
+    return shutdown_events[-1] - shutdown_events[0]
 
 
 if __name__ == "__main__":
