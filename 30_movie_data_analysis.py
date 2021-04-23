@@ -59,6 +59,3 @@ def get_average_scores(directors):
         else:
             continue
     return sorted(average_scores, key=lambda x: x[1], reverse=True)
-
-
-print(get_average_scores(get_movies_by_director()))
