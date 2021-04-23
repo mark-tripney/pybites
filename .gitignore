@@ -1,2 +1,5 @@
+# Folders
 env/
 .idea/
+# Files
+.DS_Store
