@@ -144,9 +144,3 @@ def combine_state_names_and_abbreviations(
     states.sort()
     last_ten = states[-10:]
     return first_ten + last_ten
-
-
-# print(get_every_nth_state(n=20))
-# print(get_state_abbrev("Glasgow"))
-# print(get_longest_state(states))
-print(combine_state_names_and_abbreviations())
